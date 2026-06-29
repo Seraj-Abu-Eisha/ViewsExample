@@ -25,3 +25,7 @@ build_property.EnableCodeStyleSeverity =
 [/home/voltex/Documents/ViewsExample/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[/home/voltex/Documents/ViewsExample/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFpbi9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

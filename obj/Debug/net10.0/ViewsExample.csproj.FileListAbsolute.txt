@@ -29,3 +29,4 @@
 /home/voltex/Documents/ViewsExample/obj/Debug/net10.0/ref/ViewsExample.dll
 /home/voltex/Documents/ViewsExample/obj/Debug/net10.0/ViewsExample.RazorAssemblyInfo.cache
 /home/voltex/Documents/ViewsExample/obj/Debug/net10.0/ViewsExample.RazorAssemblyInfo.cs
+/home/voltex/Documents/ViewsExample/obj/Debug/net10.0/ViewsExample.sourcelink.json
