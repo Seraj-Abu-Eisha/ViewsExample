@@ -1,7 +1,7 @@
 @using ViewsExample.Models
 @{
         string title = "Views test";
-        Person person = new Person() {Name = "John Doe", 
+        Person person = new Person() {Name = "", 
         DateofBirth = new DateTime(1990, 1, 1)};
  }
 <!DOCTYPE html>
@@ -13,6 +13,14 @@
     <body>
         <h1>Welcome to ASP.NET Core!</h1>
         <p>Name: @person.Name</p>
-        <p>Date of Birth: @person.DateofBirth.ToString("yyyy-MM-dd")</p>
+        <p>Date of Birth: @person.DateofBirth?.ToString("yyyy-MM-dd")</p>
+        @if (person != null && person.DateofBirth != null)
+        {
+            person.Name = "Jane Smith";
+            
+            person.DateofBirth = new DateTime(1995, 5, 15);
+        }else {
+            <p>Person is null or Date of Birth is null.</p>
+        }
     </body>
 </html>
