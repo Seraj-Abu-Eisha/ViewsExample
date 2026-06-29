@@ -1,0 +1,2 @@
+# ViewsExample
+ traning on views
