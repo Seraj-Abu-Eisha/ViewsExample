@@ -3,10 +3,9 @@ namespace ViewsExample.Controllers
 {
     public class MainController : Controller
     {
-        [Route("main")]
+        [Route("/")]
         public IActionResult Index()
         {
-            
             return View();
         }
     }
