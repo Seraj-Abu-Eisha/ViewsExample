@@ -1,8 +1,15 @@
 @using ViewsExample.Models
 @{
         string title = "Views test";
-        Person person = new Person() {Name = "", 
-        DateofBirth = new DateTime(1990, 1, 1)};
+        List<Person> people = new List<Person>
+        {
+            new Person { Name = "John Doe",
+            DateofBirth = new DateTime(1990,1,1), Gender = Gender.Male },
+            new Person { Name = "Jasmine ali",
+            DateofBirth = new DateTime(1992,2,2), Gender = Gender.Female },
+            new Person { Name = "Jane Smith",
+            DateofBirth = new DateTime(1995,3,3), Gender =  Gender.Female }
+        };
  }
 <!DOCTYPE html>
 <html>
@@ -12,15 +19,13 @@
     </head>
     <body>
         <h1>Welcome to ASP.NET Core!</h1>
-        <p>Name: @person.Name</p>
-        <p>Date of Birth: @person.DateofBirth?.ToString("yyyy-MM-dd")</p>
-        @if (person != null && person.DateofBirth != null)
-        {
-            person.Name = "Jane Smith";
-            
-            person.DateofBirth = new DateTime(1995, 5, 15);
-        }else {
-            <p>Person is null or Date of Birth is null.</p>
-        }
+    @foreach (var person in people)
+    {
+        <div>
+            <h2>@person.Name</h2>
+            <p>Date of Birth: @person.DateofBirth?.ToString("d")</p>
+            <p>Gender: @person.Gender</p>
+        </div>
+    }
     </body>
 </html>
