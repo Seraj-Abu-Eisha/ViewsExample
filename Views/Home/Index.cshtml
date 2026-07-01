@@ -11,6 +11,20 @@
             DateofBirth = new DateTime(1995,3,3), Gender =  Gender.Female }
         };
  }
+ @{
+    double? GetAge(DateTime? dateOfBirth)
+    {
+        if (dateOfBirth == null)
+        {
+            return null;
+        }
+        DateTime today = DateTime.Today;
+        int age = today.Year - dateOfBirth.Value.Year;
+        if (dateOfBirth.Value.Date > today.AddYears(-age)) age--;
+        return age;
+
+    }
+ }
 <!DOCTYPE html>
 <html>
     <head> 
@@ -19,12 +33,14 @@
     </head>
     <body>
         <h1>Welcome to ASP.NET Core!</h1>
-    @foreach (var person in people)
-    {
+    @for (int i = 0; i < 3; i++)
+    { 
+        Person person = people[i];
         <div>
             <h2>@person.Name</h2>
             <p>Date of Birth: @person.DateofBirth?.ToString("d")</p>
             <p>Gender: @person.Gender</p>
+            <p>Age: @GetAge(person.DateofBirth)</p>
         </div>
     }
     </body>
